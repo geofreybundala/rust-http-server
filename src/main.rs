@@ -4,18 +4,16 @@ fn main() {
     server.run();
 }
 
-struct  Server {
-    addr: String
+struct Server {
+    addr: String,
 }
 
 impl Server {
-    fn new(addr: String) -> Server{
-        Server{
-            addr
-        }
-    } 
+    fn new(addr: String) -> Self {
+        Self { addr }
+    }
 
-    fn run(self){
-
+    fn run(self) {
+        print!("listening on {}", self.addr)
     }
 }
